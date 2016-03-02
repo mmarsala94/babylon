@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <title>Babylon - Getting Started</title>
+    <!-- link to the last version of babylon -->
+  <!--  <script src="babylon.2.1.debug.js"></script> -->
+    <script src="Babylon.js-master/dist/babylon.2.3.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+window.addEventListener('DOMContentLoaded', function() { var canvas = document.getElementById('renderCanvas'); var engine = new BABYLON.Engine(canvas, true);
+var createScene = function() {
+var scene = new BABYLON.Scene(engine); return scene;
+} var scene = createScene(); engine.runRenderLoop(function() {
+scene.render();
+}); window.addEventListener('resize', function() {
+engine.resize();
+});
+}); </script>
+</body>
+</html>
